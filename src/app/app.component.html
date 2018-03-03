@@ -1,0 +1,52 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav [mode]="isLargeScreen() ? 'side' : 'over'" class="example-sidenav">
+        <mat-nav-list>
+            <mat-list-item icon="home">
+                <nav>
+                    <a (click)="loadlazybindingModule()">Lazy</a>
+                </nav>
+            </mat-list-item>
+            <mat-list-item>Page 2</mat-list-item>
+            <mat-list-item>Page 3</mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-toolbar color="primary" style="position: fixed;">
+
+
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon class="mat-24">menu</mat-icon>
+
+        </button>
+        <span> Angular Project</span>
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="appMenu">
+            <mat-icon>menu</mat-icon> Menu</button>
+    </mat-toolbar>
+    <div class="example-sidenav-content">
+            <router-outlet name="appContainer"></router-outlet>
+        <!-- <div class="container">
+            <div class="jumbotron">
+                <h1>Welcome</h1>
+                <h2>Angular & Bootstrap Main View</h2>
+            </div>
+        </div> -->
+    </div>
+   
+</mat-sidenav-container>
+
+
+
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Setting</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>voicemall</mat-icon>
+        <span>Voice Mall</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable Notifications</span>
+    </button>
+</mat-menu>

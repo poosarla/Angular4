@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12" [innerHtml]="getTitle()">Child Component</div>
+    <div class="col-md-12" [innerHtml]="dualChangeVarible">Child Component</div>
+    <div class="col-md-12">
+        <div class="row" *ngIf="languageID==1">
+            <div class="col-md-6">
+                AngularJS Details
+            </div>
+            <div class="col-md-6">
+                <button mat-mini-fab color="primary" (click)="changeLanguageColor(1);">AJS</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="languageID==2">
+            <div class="col-md-6">
+                Angular Details
+            </div>
+            <div class="col-md-6">
+                <button mat-mini-fab color="primary" (click)="changeLanguageColor(1);">A</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="languageID==3">
+            <div class="col-md-6">
+                C# Details
+            </div>
+            <div class="col-md-6">
+                <button mat-mini-fab color="primary" (click)="changeLanguageColor(1);">C#</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0px;
+}
+
+body::-webkit-scrollbar {   
+    background-color: #6e6e6e;
+    outline: 1px solid #333;
+    height: 6px;
+    width: 6px;
+}
+
+.mat-sidenav-content::-webkit-scrollbar, body::-webkit-scrollbar, mat-sidenav.sidenav::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.mat-sidenav-content::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb, mat-sidenav.sidenav::-webkit-scrollbar-thumb {
+    background-color: #6e6e6e;
+    outline: 1px solid #333;
+}
+
+/* mat-sidenav{
+    
+    margin-left: 0px;
+    margin-right: 0px;
+} */
+
+/* 
+.cdk-mouse-focused{
+    border-color: pink !important;
+
+}
+.cdk-focused:focus{
+    border-color: pink !important;
+
+} */

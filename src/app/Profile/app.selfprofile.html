@@ -1,0 +1,44 @@
+<!-- <div class="example-sidenav-content"> -->
+<div class="container">
+    <div *ngIf="showSelfProfile">
+        <mat-card class="example-card" (click)="hideProfileCard()">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ravi Teja</mat-card-title>
+                <mat-card-subtitle>Software Developer</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="assets/images/profile.jpg" style="width:400px;" alt="Photo of a Ravi Teja">
+            <mat-card-content>
+                <p>
+                    Experience :3 Yrs
+            </mat-card-content>
+            <mat-card-actions>
+                <!-- <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="row" *ngIf="!showSelfProfile">
+        <div class="col-sm-12 col-md-12">
+            <h2>Known Programming Languages</h2>
+            <h3>{{mydualVariable}}</h3>
+        </div>
+    </div>
+    <div class="row" *ngIf="!showSelfProfile">
+        <div class="col-sm-6 col-md-6">
+            <ul>
+                <li *ngFor="let progLanItem of progLanguagesList">
+                    <mat-chip [color]="primary" (click)="ViewCompleteProfile(progLanItem)"> {{ progLanItem.Name }}</mat-chip>
+                    <!-- (click)=" changeroute()" -->
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-md-6">
+            <app-language-detail #languagedetail1 [languagedetailinput]="languageinputcomp1" [(appce)]="mydualVariable"></app-language-detail>
+            <app-language-detail #languagedetail2 [languagedetailinput]="languageinputcomp2" ></app-language-detail>
+        </div>
+    </div>
+
+</div>
+
+<!-- </div> -->

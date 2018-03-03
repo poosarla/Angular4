@@ -1,0 +1,14 @@
+.example-card {
+  width: 400px;
+}
+.mat-card-image{
+    max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/images/profile.jpg');
+  background-size: cover;
+}
+mat-chip {
+  max-width: 200px;
+}
