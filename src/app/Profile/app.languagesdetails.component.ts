@@ -17,6 +17,7 @@ export class AppLanguagesDetailComponent implements OnChanges, OnInit {
   @Input('appce') set setDualSideValue(value) {
     this.dualChangeVarible = value;
   }
+  
 
   changeLog: string[] = [];
 
