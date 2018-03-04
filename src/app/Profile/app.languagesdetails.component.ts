@@ -32,7 +32,7 @@ export class AppLanguagesDetailComponent implements OnChanges, OnInit {
 
   ngOnChanges(changes: SimpleChanges) {
 
-    debugger;
+   // debugger;
 
     let log: string[] = [];
     for (let propName in changes) {
