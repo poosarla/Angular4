@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, ViewContainerRef, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { SelfProfileComponent } from './app.selfprofile.component';
 @Component({
-  selector: 'app-language-detail',
+  selector: '[app-language-detail]',
   templateUrl: './app.languagesdetails.html',
   styleUrls: [],
 })
