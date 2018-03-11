@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 //import { FormsModule } from '@angular/forms';
 
@@ -25,8 +25,8 @@ import { CommonService } from './adminLibrary.service';
     //MatButtonModule, MatCheckboxModule,
     MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule,
     HttpModule,
-    MatChipsModule
-
+    MatChipsModule,
+    NgbModule.forRoot(),
   ],
   providers: [CommonService],
   bootstrap: [],

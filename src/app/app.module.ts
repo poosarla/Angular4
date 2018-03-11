@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
-
+import{ModalModule} from 'ng-bootstrap-modal';
 
 import 'hammerjs';
 
@@ -23,6 +23,7 @@ import { AppRoutingModule } from './RoutingModule/app_routing.module';
 
 import { ToolBarComponent } from './app.toolbar.component';
 import { AppComponent } from './app.component';
+import { NgbdModalComponent, NgbdModalContent } from './app.modalpopup';
 
 //import { SimpleRouteComponent } from './app.simplerouter.component';
 
@@ -39,6 +40,8 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     ToolBarComponent,
+    NgbdModalComponent,
+    NgbdModalContent
     //SimpleRouteComponent
     //SideNavBarComponent
   ],
@@ -52,11 +55,15 @@ import { AppComponent } from './app.component';
     // AdminLibraryModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    ModalModule.forRoot([ ])//{ name: 'popup', component: ConfirmDialogComponent}
     //  RouterModule.forRoot(routes,{ enableTracing: true } ) ,// { enableTracing: true } <-- debugging purposes only
     // MatButtonModule, MatCheckboxModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule,
     // ProfileModule
   ],
   providers: [],
+  entryComponents:[
+    NgbdModalContent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
